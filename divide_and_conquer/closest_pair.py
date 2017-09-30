@@ -4,7 +4,7 @@ Created on Fri Sep 29 19:56:24 2017
 
 @author: zliu1
 """
-# closestpair_presort()
+# closestpair_presort() in O(nlogn)
 # input: a list of points in R^2, p=[[x1,y1],[x2,y2]...]
 # output: a pair of points that are closest to each other
 def combine(l1,l2,n): #combine 2 sorted lists
