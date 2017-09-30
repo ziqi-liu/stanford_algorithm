@@ -4,6 +4,7 @@ Created on Fri Sep 29 11:38:26 2017
 
 @author: zliu1
 """
+# count the inversion I(k1,k2,...kn) in O(nlogn)
 def combine(l1,l2): #combine 2 sorted lists and count inversion
     i,j,l,n,len1,len2 = 0,0,[],0,len(l1),len(l2)
     while(1):
