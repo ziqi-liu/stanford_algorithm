@@ -6,19 +6,10 @@ This is a temporary script file.
 """
 
 
-import os
-
-g = {}
-os.chdir(r'C:\users\zliu1\Desktop')
-with open('kargerMinCut.txt') as f:
-    for line in f:
-        l= line.split()
-        l = [int(x) for x in l]
-        g[l[0]] = l[1:]
 
 
 import queue
-def dfs(g,s): # breath first search with layers
+def dfs(g,s): # depth first search 
     explore = {}
     result = []
     for e in list(g):
@@ -35,7 +26,6 @@ def dfs(g,s): # breath first search with layers
                 q.put(e)
     return result
 
-print(dfs(g,1))
     
 
 
