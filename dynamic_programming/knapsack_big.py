@@ -32,3 +32,13 @@ def knapsack(n,w):
             g[(n,w)] = max(knapsack(n-1,w),knapsack(n-1,w-e[n-1][1])+e[n-1][0])
     return g[(n,w)]
 knapsack(n,w)
+
+def reconstruct(n,w):
+    if n <= 0 or w <= 0:
+        return []
+    if g[(n,w)] == knapsack(n-1,w):
+        return reconstruct(n-1,w)
+    else:
+        return reconstruct(n-1,w-e[n-1][1]) + [n]
+    
+reconstruct(n,w)
